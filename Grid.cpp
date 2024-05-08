@@ -72,8 +72,11 @@ void Grid::update()
         {
             if (tablero[i][j] == 1)
             {
-                if (tablero[i][j + speed] == 0;
+                if (tablero[i][j + speed] == 0)
+
+                {
                     tablero[i][j + speed] = 1;
+                }
             }
         }
     }
