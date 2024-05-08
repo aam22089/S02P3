@@ -67,4 +67,3 @@ void Grid::update()
 {
     
 }
-
