@@ -79,3 +79,39 @@ void Grid::update()
     
 }
 }
+<<<<<<< HEAD
+=======
+
+// int Grid::calcularVecinos(int i, int j)
+// {
+//     int vecinos = 0;
+//     // arriba a la izquierda
+//     if (i > 0 && j > 0 && this->tablero[i - 1][j - 1] == 1)
+//         vecinos++;
+//     // arriba
+//     if (j > 0 && this->tablero[i][j - 1] == 1)
+//         vecinos++;
+//     // arriba a la derecha
+//     if (j > 0 && i < this->rows - 1 && this->tablero[i + 1][j - 1] == 1)
+//         vecinos++;
+
+//     // izquierda
+//     if (i > 0 && this->tablero[i - 1][j] == 1)
+//         vecinos++;
+//     // derecha
+//     if (i < this->rows - 1 && this->tablero[i + 1][j] == 1)
+//         vecinos++;
+
+//     // abajo a la izquierda
+//     if (i > 0 && j < this->cols - 1 && this->tablero[i - 1][j + 1] == 1)
+//         vecinos++;
+//     // // abajo
+//     if (j < this->cols - 1 && this->tablero[i][j + 1] == 1)
+//         vecinos++;
+//     // abajo a la derecha
+//     if (i < this->rows - 1 && j < this->cols - 1 && this->tablero[i + 1][j + 1] == 1)
+//         vecinos++;
+
+//     return vecinos;
+// }
+>>>>>>> c05f96b892fe9741355a449b1df7aaf4f01bb320
