@@ -65,22 +65,19 @@ void Grid::toggle(int x, int y)
 
 void Grid::update()
 {
-    int speed=1;
+    int speed = 1;
     for (int i = 0; i < this->rows; i++)
     {
         for (int j = 0; j < this->cols; j++)
         {
-            if(tablero[i][j]==1)
+            if (tablero[i][j] == 1)
             {
-                if(tablero[i][j+speed]==0)
-                tablero[i][j+speed]=1
+                if (tablero[i][j + speed] == 0;
+                    tablero[i][j + speed] = 1;
             }
+        }
     }
-    
 }
-}
-<<<<<<< HEAD
-=======
 
 // int Grid::calcularVecinos(int i, int j)
 // {
@@ -114,4 +111,3 @@ void Grid::update()
 
 //     return vecinos;
 // }
->>>>>>> c05f96b892fe9741355a449b1df7aaf4f01bb320
