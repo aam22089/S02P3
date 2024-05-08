@@ -75,7 +75,7 @@ void Grid::update()
                 
                 if (tablero[i][j + speed] == 0)
                 {
-                    if (j!=800)
+                    if (j<this->cols-1)
                     {siguiente[i][j]=0;
                     siguiente[i][j + speed] = 1;}
                     
