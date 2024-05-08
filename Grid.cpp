@@ -60,10 +60,60 @@ void Grid::toggle(int x, int y)
     int indexX = x / sizeX;
     int indexY = y / sizeY;
 
-    tablero[indexX][indexY] = (tablero[indexX][indexY] + 1) % 2;
+    tablero[indexX][indexY] = 1;
 }
 
 void Grid::update()
 {
+    /*
+        para cada celda:
+        calcular cuantos vecinos vivos tiene
+        ver si está viva o muerta en el siguiente a partir de los vecinos
+    */
+
+    for (int i = 0; i < this->rows; i++)
+    {
+        for (int j = 0; j < this->cols; j++)
+        {
+            if(tablero[i][j+1]==0)
+            {
+                tablero[i][j]==0;
+                tablero[i][j+1]==1;
+            }
+    }
+
+    this->tablero = this->siguiente;
 }
 
+int Grid::calcularVecinos(int i, int j)
+{
+    int vecinos = 0;
+    // arriba a la izquierda
+    if (i > 0 && j > 0 && this->tablero[i - 1][j - 1] == 1)
+        vecinos++;
+    // arriba
+    if (j > 0 && this->tablero[i][j - 1] == 1)
+        vecinos++;
+    // arriba a la derecha
+    if (j > 0 && i < this->rows - 1 && this->tablero[i + 1][j - 1] == 1)
+        vecinos++;
+
+    // izquierda
+    if (i > 0 && this->tablero[i - 1][j] == 1)
+        vecinos++;
+    // derecha
+    if (i < this->rows - 1 && this->tablero[i + 1][j] == 1)
+        vecinos++;
+
+    // abajo a la izquierda
+    if (i > 0 && j < this->cols - 1 && this->tablero[i - 1][j + 1] == 1)
+        vecinos++;
+    // // abajo
+    if (j < this->cols - 1 && this->tablero[i][j + 1] == 1)
+        vecinos++;
+    // abajo a la derecha
+    if (i < this->rows - 1 && j < this->cols - 1 && this->tablero[i + 1][j + 1] == 1)
+        vecinos++;
+
+    return vecinos;
+}
