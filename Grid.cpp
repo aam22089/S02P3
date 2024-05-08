@@ -72,15 +72,19 @@ void Grid::update()
         {
             if (tablero[i][j] == 1)
             {
+                
                 if (tablero[i][j + speed] == 0)
-
                 {
-                    tablero[i][j]=0;
-                    tablero[i][j + speed] = 1;
+                    if (j!=800)
+                    {siguiente[i][j]=0;
+                    siguiente[i][j + speed] = 1;}
+                    
+                    
                 }
             }
         }
     }
+    this->tablero=this->siguiente;
 }
 
 

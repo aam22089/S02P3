@@ -10,7 +10,7 @@ int main()
 {
     bool play = false;
     RenderWindow window(VideoMode(width, height), "SFML works!");
-    window.setFramerateLimit(5);
+    window.setFramerateLimit(60);
     Grid grid(numCells, width, height);
     while (window.isOpen())
     {
