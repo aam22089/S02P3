@@ -82,9 +82,13 @@ void Grid::update()
                     
                 }
             }
+            
         }
     }
     this->tablero=this->siguiente;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> dc83789ea3d889d5a581ac00d8e73de158b06257
 
