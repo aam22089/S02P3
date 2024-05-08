@@ -2,7 +2,7 @@
 #include "Grid.hpp"
 using namespace sf;
 
-int numCells = 20;
+int numCells = 70;
 int width = 700;
 int height = 700;
 

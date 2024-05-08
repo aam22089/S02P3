@@ -43,8 +43,6 @@ void Grid::drawTo(RenderWindow &window)
         {
             RectangleShape rect(Vector2f(sizeX, sizeY));
             rect.setPosition(Vector2f(j * sizeX, i * sizeY));
-            rect.setOutlineThickness(1);
-            rect.setOutlineColor(Color::Black);
             if (tablero[j][i] == 1)
             {
                 rect.setFillColor(Color::Green);
