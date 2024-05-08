@@ -28,16 +28,10 @@ int main()
                     int y = event.mouseButton.y;
                     grid.toggle(x, y);
                 }
-                if (event.mouseButton.button == Mouse::Right)
-                {
-                    play = !play;
-                }
             }
 
         }
 
-        window.clear();
-        if (play)
             grid.update();
         grid.drawTo(window);
         window.display();
