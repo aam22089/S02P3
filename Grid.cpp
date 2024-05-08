@@ -60,10 +60,11 @@ void Grid::toggle(int x, int y)
     int indexX = x / sizeX;
     int indexY = y / sizeY;
 
-    tablero[indexX][indexY] = (tablero[indexX][indexY] + 1) % 2;
+    tablero[indexX][indexY] = 1;
 }
 
 void Grid::update()
 {
+    
 }
 
