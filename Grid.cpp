@@ -72,23 +72,17 @@ void Grid::update()
         {
             if (tablero[i][j] == 1)
             {
-                
+
                 if (tablero[i][j + speed] == 0)
                 {
-                    if (j<this->cols-1)
-                    {siguiente[i][j]=0;
-                    siguiente[i][j + speed] = 1;}
-                    
-                    
+                    if (j < this->cols - 1)
+                    {
+                        siguiente[i][j] = 0;
+                        siguiente[i][j + speed] = 1;
+                    }
                 }
             }
-            
         }
     }
-    this->tablero=this->siguiente;
+    this->tablero = this->siguiente;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> dc83789ea3d889d5a581ac00d8e73de158b06257
-
