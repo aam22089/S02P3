@@ -78,8 +78,8 @@ void Grid::update()
                     tablero[i][j + speed] = 1;
                 }
             }
+            
         }
     }
-}
 }
 
