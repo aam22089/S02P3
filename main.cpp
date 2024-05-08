@@ -29,10 +29,9 @@ int main()
                     grid.toggle(x, y);
                 }
             }
-
         }
 
-            grid.update();
+        grid.update();
         grid.drawTo(window);
         window.display();
     }
