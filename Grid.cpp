@@ -80,7 +80,7 @@ void Grid::update()
                         siguiente[i][j] = 0;
                         siguiente[i][j + speed] = 1;
                     }
-                }
+                } 
             }
         }
     }
