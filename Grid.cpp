@@ -72,8 +72,20 @@ void Grid::update()
         {
             if (tablero[i][j] == 1)
             {
-
-                if (tablero[i][j + speed] == 0)
+                if(tablero[i][j+speed]==1)
+                {
+                    if ( i<this->rows-1 && tablero[i + 1][j + 2] == 0 )
+                    {
+                        siguiente[i + 1][j + 2] = 1;
+                        siguiente[i][j] = 0;
+                    }
+                    else if (i>0 && tablero[i - 1][j + 2] == 0)
+                    {
+                        siguiente[i - 1][j + 2] = 1;
+                        siguiente[i][j] = 0;
+                    }
+                }
+                else if (tablero[i][j + speed] == 0)
                 {
                     if (j < this->cols - 1)
                     {
@@ -81,20 +93,7 @@ void Grid::update()
                         siguiente[i][j + speed] = 1;
                     }
                 }
-                /*else
-                {
-                    if (tablero[i + 1][j + 2] == 0)
-                    {
-                        siguiente[i + 1][j + 2] = 1;
-                        siguiente[i][j] = 0;
-                    }
-                    /*else if (tablero[i + 1][j + 2] == 0)
-                    {
-                        siguiente[i - 1][j + 2] = 1;
-                        siguiente[i][j] = 0;
-                    }
-                }
-                */
+                
             }
         }
     }
