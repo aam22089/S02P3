@@ -65,35 +65,31 @@ void Grid::toggle(int x, int y)
 
 void Grid::update()
 {
-    int speed = 1;
     for (int i = 0; i < this->rows; i++)
     {
         for (int j = 0; j < this->cols; j++)
         {
             if (tablero[i][j] == 1)
             {
-                if(tablero[i][j+speed]==1)
+                if (i < this->rows - 1 && tablero[i + 1][j] == 0)
                 {
-                    if ( i<this->rows-1 && tablero[i + 1][j + 2] == 0 )
-                    {
-                        siguiente[i + 1][j + 2] = 1;
-                        siguiente[i][j] = 0;
-                    }
-                    else if (i>0 && tablero[i - 1][j + 2] == 0)
-                    {
-                        siguiente[i - 1][j + 2] = 1;
-                        siguiente[i][j] = 0;
-                    }
+                    siguiente[i + 1][j] = 1;
+                    siguiente[i][j] = 0;
                 }
-                else if (tablero[i][j + speed] == 0)
+                else if (i < this->rows - 2 && j < this->cols - 1 && tablero[i + 2][j + 1] == 0)
                 {
-                    if (j < this->cols - 1)
-                    {
-                        siguiente[i][j] = 0;
-                        siguiente[i][j + speed] = 1;
-                    }
+                    siguiente[i + 1][j + 1] = 1;
+                    siguiente[i][j] = 0;
                 }
-                
+                else if (i < this->rows - 2 && j > 0 && tablero[i + 2][j - 1] == 0)
+                {
+                    siguiente[i + 1][j - 1] = 1;
+                    siguiente[i][j] = 0;
+                }
+                else
+                {
+                    siguiente[i][j] = 1;
+                }
             }
         }
     }
