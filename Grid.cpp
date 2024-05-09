@@ -80,7 +80,21 @@ void Grid::update()
                         siguiente[i][j] = 0;
                         siguiente[i][j + speed] = 1;
                     }
-                } 
+                }
+                /*else
+                {
+                    if (tablero[i + 1][j + 2] == 0)
+                    {
+                        siguiente[i + 1][j + 2] = 1;
+                        siguiente[i][j] = 0;
+                    }
+                    /*else if (tablero[i + 1][j + 2] == 0)
+                    {
+                        siguiente[i - 1][j + 2] = 1;
+                        siguiente[i][j] = 0;
+                    }
+                }
+                */
             }
         }
     }
